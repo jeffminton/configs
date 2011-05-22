@@ -1,0 +1,95 @@
+#! /bin/sh
+
+### BEGIN INIT INFO
+# Provides:      pms
+# Required-Start:   $network $local_fs $remote_fs
+# Required-Stop:
+# Default-Start:   2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description:   PS3 UPnP Media Server
+### END INIT INFO
+##
+## Version 2.1 By RyLoS 06-nov-2009 (email: rylos78@gmail.com)
+##
+# Source init-functions:
+#source /lib/lsb/init-functions
+. /lib/lsb/init-functions
+
+# Script variables:
+MONTH=`date +%Y-%m`
+PMS_HOME="/home/ffej/.pms"
+PMS_LOG="/var/log/pms/pms-$MONTH.log"
+DESC="PS3 UPnP Media Server"
+NAME="PMS.sh"
+
+# Path to executable:
+DAEMON="$PMS_HOME/$NAME"
+
+# Run as user/group [UPDATE THESE TO MAKE VALID]:
+PMSUSER=ffej
+PMSGROUP=ffej
+
+# update PATH:
+PATH="$PMS_HOME:${PATH:+$PATH:}/usr/sbin:/sbin"
+
+# export env-vars
+export PATH PMS_HOME PMS_LOG
+
+# Exit if the package is not installed
+if [ ! -x "$DAEMON" ]; then {
+   echo "Couldn't find $DAEMON or not executable"
+   exit 99
+    }
+fi
+
+#
+# Function that starts the daemon/service
+#
+do_start() {
+    # Return
+    #   0 if daemon has been started
+    #   1 if daemon was already running
+    start-stop-daemon --start --quiet --chdir $PMS_HOME --chuid $PMSUSER:$PMSGROUP --exec $DAEMON --test > /dev/null || return 1
+    start-stop-daemon --start --quiet --chdir $PMS_HOME --chuid $PMSUSER:$PMSGROUP --exec $DAEMON > $PMS_LOG 2>&1 &
+}
+
+
+#
+# Function that stops the daemon/service
+#
+do_stop() {
+    # Return
+    #   0 if daemon has been stopped
+    #   1 if daemon was already stopped
+    #   2 if daemon could not be stopped
+    #   other if a failure occurred
+    start-stop-daemon --stop --signal 2 --retry 5 --quiet --name java
+    RETVAL="$?"
+    [ "$RETVAL" = 2 ] && return 2
+    return "$RETVAL"
+}
+
+case "$1" in
+    start)
+   log_daemon_msg "Starting $DESC" "$NAME"
+   do_start
+   case "$?" in
+       0|1) log_end_msg 0 ;;
+       2) log_end_msg 1 ;;
+   esac
+   ;;
+    stop)
+   log_daemon_msg "Stopping $DESC" "$NAME"
+   do_stop
+   case "$?" in
+       0|1) log_end_msg 0 ;;
+       2) log_end_msg 1 ;;
+   esac
+   ;;
+    *)
+   echo "Usage: $SCRIPTNAME {start|stop}" >&2
+   exit 3
+   ;;
+esac
+
+exit 0
