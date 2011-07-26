@@ -107,3 +107,5 @@ fi
 #synclient TapButton2=2 TapButton3=3
 export CLASSPATH="/home/ffej/Portable_Documents/Bill/JavaLang"
 export PATH="${PATH}:${HOME}/.local/bin"
+
+source .bash.local
