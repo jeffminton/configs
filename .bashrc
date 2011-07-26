@@ -104,5 +104,6 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-export HTTP_PROXY=135.156.195.210:9400
-export http_proxy=${HTTP_PROXY}
+#synclient TapButton2=2 TapButton3=3
+export CLASSPATH="/home/ffej/Portable_Documents/Bill/JavaLang"
+export PATH="${PATH}:${HOME}/.local/bin"
