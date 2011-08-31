@@ -104,8 +104,6 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-#synclient TapButton2=2 TapButton3=3
-export CLASSPATH="/home/ffej/Portable_Documents/Bill/JavaLang"
 export PATH="${PATH}:${HOME}/.local/bin"
 
-source .bash.local
+source .bashrc_local

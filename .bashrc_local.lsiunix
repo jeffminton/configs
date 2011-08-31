@@ -1,0 +1,4 @@
+export HTTP_PROXY=135.156.195.210:9400
+export http_proxy=${HTTP_PROXY}
+export PATH="/tools/cfr/bin:/sopt/MKS/bin:${PATH}"
+
