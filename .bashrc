@@ -106,4 +106,4 @@ fi
 
 export PATH="${PATH}:${HOME}/.local/bin"
 
-source .bashrc_local
+source ~/.bashrc_local
