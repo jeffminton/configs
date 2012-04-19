@@ -104,6 +104,7 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-export PATH="${PATH}:${HOME}/.local/bin"
+export PATH="${HOME}/bin:${PATH}:${HOME}/.local/bin"
+export LD_LIBRARY_PATH=${HOME}/lib:${LD_LIBRARY_PATH}
 
 source ~/.bashrc_local

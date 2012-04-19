@@ -1,8 +1,8 @@
 filetype plugin on
 set backspace=indent,eol,start
 syntax enable
+colorscheme nuvola
 set showmode
-set number
 set showcmd
 set wildmenu
 runtime ftplugin/man.vim
@@ -15,8 +15,10 @@ autocmd! BufNewFile,BufReadPre,FileReadPre *.rb     so ~/.vim/ruby.vim
 autocmd! BufNewFile,BufReadPre,FileReadPre *.erb     so ~/.vim/ruby.vim
 set hlsearch
 set showmatch
+set incsearch
 "set ignorecase
 "set smartcase
 set laststatus=2
 set statusline=%t\ [%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
 set colorcolumn=90
+
