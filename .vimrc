@@ -1,7 +1,7 @@
 filetype plugin on
 set backspace=indent,eol,start
 syntax enable
-colorscheme nuvola
+colorscheme zenburn
 set showmode
 set showcmd
 set wildmenu
