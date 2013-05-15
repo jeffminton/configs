@@ -2,7 +2,7 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
-echo ".bashrc sourced"
+#echo ".bashrc sourced"
 
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
@@ -104,8 +104,13 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-export PATH="${HOME}/bin:${PATH}:${HOME}/.local/bin"
+export PATH="/usr/bin:${HOME}/bin:${PATH}:${HOME}/.local/bin"
 export LD_LIBRARY_PATH=${HOME}/lib:${LD_LIBRARY_PATH}
 export TERM="xterm-256color"
 
-source ~/.bashrc_local
+#source ~/.bashrc_local
+
+#=== sysidk set-up
+# (please leave '#===' lines) last updated Thu Aug  2 16:15:12 EDT 2012
+source "/home/ffej/.sysidk/sysidk.rc"
+#=== end of sysidk set-up
