@@ -106,5 +106,6 @@ fi
 
 export PATH="${HOME}/bin:${PATH}:${HOME}/.local/bin"
 export LD_LIBRARY_PATH=${HOME}/lib:${LD_LIBRARY_PATH}
+export TERM="xterm-256color"
 
 source ~/.bashrc_local
