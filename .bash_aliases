@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo ".bash_aliases sourced"
+#echo ".bash_aliases sourced"
 
 alias bill='ssh -X jmint580@bill.kutztown.edu'
 alias blinklocal='ssh ffej@blinking-server'
