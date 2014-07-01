@@ -1,6 +1,7 @@
+call pathogen#infect()
+syntax enable
 filetype plugin on
 set backspace=indent,eol,start
-syntax enable
 colorscheme zenburn
 set showmode
 set showcmd
@@ -12,7 +13,9 @@ set tabstop=8
 set shiftwidth=4
 set softtabstop=4
 autocmd! BufNewFile,BufReadPre,FileReadPre *.rb     so ~/.vim/ruby.vim
-autocmd! BufNewFile,BufReadPre,FileReadPre *.erb     so ~/.vim/ruby.vim
+autocmd! BufNewFile,BufReadPre,FileReadPre *.erb    so ~/.vim/ruby.vim
+autocmd BufNewFile,BufReadPost *.html..erb set filetype=eruby.html
+autocmd BufNewFile,BufReadPost *.js..erb set filetype=eruby
 autocmd BufNewFile,BufReadPost *.ino,*.pde set filetype=cpp
 set hlsearch
 set showmatch
