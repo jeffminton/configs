@@ -11,6 +11,7 @@ alias router="ssh ffej@192.168.1.1"
 alias rpilocal='ssh ffej@blinking-pi'
 alias rpiremote='ssh -p 23 ffej@home.blinkingbox.net'
 alias sudo='sudo env PATH=$PATH'
+alias irssi='TERM=screen-256color irssi'
 alias minelocal='ssh minecraft@blinking-server'
 alias minelocalx='ssh -X minecraft@blinking-server'
 alias mineremote='ssh -L 3389:blinking-book:3389 -L 5901:blinking-book:5901 -L 5902:localhost:5901 -L 10000:localhost:10000 -L 3390:blinking-media:3389 minecraft@home.blinkingbox.net'
