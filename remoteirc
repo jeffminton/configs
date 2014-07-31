@@ -1,0 +1,12 @@
+#!/bin/sh
+
+host="ffej@home.blinkingbox.net"
+notify="$HOME/bin/notify-remote"
+
+set -e
+
+socat -u tcp4-listen:12000,reuseaddr,fork,bind=127.0.0.1 exec:$notify &
+
+autossh $host -R 12000:localhost:12000 -L 8112:localhost:8112 -t 'tmux attach'
+
+pkill -KILL socat
