@@ -110,8 +110,8 @@ export PATH=$GOROOT/bin:$PATH
 export GOPATH=~/golang/packages
 export PATH=$GOPATH/bin:$PATH
 export LD_LIBRARY_PATH=${HOME}/lib:${LD_LIBRARY_PATH}
-
-export TERMINFO=~/terminfo/
+[ -z "$TMUX" ] && export TERM=xterm-256color
+#export TERM="xterm-256color"
 export TERM="screen-256color"
 
 # Note: ~/.ssh/environment should not be used, as it
@@ -170,13 +170,15 @@ unset env
 
 #source ~/.bashrc_local
 
+source ~/.railsrc
+
 #=== sysidk set-up
 # (please leave '#===' lines) last updated Thu Aug  2 16:15:12 EDT 2012
 #source "/home/ffej/.sysidk/sysidk.rc"
 #=== end of sysidk set-up
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-source /home/jminton/.rvm/scripts/rvm
+#source /home/jminton/.rvm/scripts/rvm
 
 
 export JAVA_HOME=/usr
