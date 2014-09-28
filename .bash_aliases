@@ -1,5 +1,8 @@
 #!/bin/bash
 
+
+alias save_tmux_sessions='rm .tmux_restore_sessions; tmux list-sessions | cut -d ":" -f 1 | xargs -I {[]} echo "new-session -s {[]}" >> .tmux_restore_sessions; echo "source-file ~/.tmux.conf" >> .tmux_restore_sessions'
+
 #echo ".bash_aliases sourced"
 
 alias bill='ssh -X jmint580@bill.kutztown.edu'
@@ -21,3 +24,4 @@ alias blinkingbox='ssh -i ~/Documents/blinkingbox/jeff-key-pair-virginia.pem ubu
 alias crowdplsr_mount='sshfs -o IdentityFile=/home/ffej/Documents/crowdplsr/jeff-key-pair-virginia.pem ubuntu@ec2-54-85-57-159.compute-1.amazonaws.com: ~/remote/crowdplsr'
 alias blinkingbox_mount='sshfs -o IdentityFile=/home/ffej/Documents/crowdplsr/jeff-key-pair-virginia.pem ubuntu@ec2-54-85-57-159.compute-1.amazonaws.com: ~/remote'
 alias thin_ssl='thin start -p 3001 --ssl --ssl-key-file .ssl/server.key --ssl-cert-file .ssl/server.crt'
+
