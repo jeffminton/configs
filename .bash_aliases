@@ -30,4 +30,25 @@ alias blinkingserver_mount='sshfs ffej@home.blinkingbox.net: ~/remote/blinkingbo
 alias blinkingbox_mount='sshfs ffej@192.168.1.128: ~/remote/blinkingbox'
 alias pivpn_mount='sshfs pi@192.168.1.86: ~/remote/pivpn'
 alias crowdplsr_test_mount='sshfs crowdplsr_test@192.168.160.51: ~/remote/crowdplsr'
+alias thin_ssl_3001='thin start -p 3001 --ssl --ssl-key-file .ssl/server.key --ssl-cert-file .ssl/server.crt'
+alias thin_ssl_3002='thin start -p 3002 --ssl --ssl-key-file .ssl/server.key --ssl-cert-file .ssl/server.crt'
+alias thin_ssl_3003='thin start -p 3003 --ssl --ssl-key-file .ssl/server.key --ssl-cert-file .ssl/server.crt'
+alias thin_ssl_3004='thin start -p 3004 --ssl --ssl-key-file .ssl/server.key --ssl-cert-file .ssl/server.crt'
+alias thin_ssl_3005='thin start -p 3005 --ssl --ssl-key-file .ssl/server.key --ssl-cert-file .ssl/server.crt'
+alias thin_ssl_3006='thin start -p 3006 --ssl --ssl-key-file .ssl/server.key --ssl-cert-file .ssl/server.crt'
+alias thin_ssl_3007='thin start -p 3007 --ssl --ssl-key-file .ssl/server.key --ssl-cert-file .ssl/server.crt'
+alias thin_ssl_3008='thin start -p 3008 --ssl --ssl-key-file .ssl/server.key --ssl-cert-file .ssl/server.crt'
+alias thin_ssl_3009='thin start -p 3009 --ssl --ssl-key-file .ssl/server.key --ssl-cert-file .ssl/server.crt'
+alias thin_ssl_3010='thin start -p 3010 --ssl --ssl-key-file .ssl/server.key --ssl-cert-file .ssl/server.crt'
+alias thin_ssl_3011='thin start -p 3011 --ssl --ssl-key-file .ssl/server.key --ssl-cert-file .ssl/server.crt'
+alias thin_ssl_3012='thin start -p 3012 --ssl --ssl-key-file .ssl/server.key --ssl-cert-file .ssl/server.crt'
+alias thin_ssl_3013='thin start -p 3013 --ssl --ssl-key-file .ssl/server.key --ssl-cert-file .ssl/server.crt'
+alias thin_ssl_3014='thin start -p 3014 --ssl --ssl-key-file .ssl/server.key --ssl-cert-file .ssl/server.crt'
+alias thin_ssl_3015='thin start -p 3015 --ssl --ssl-key-file .ssl/server.key --ssl-cert-file .ssl/server.crt'
+alias thin_ssl_3016='thin start -p 3016 --ssl --ssl-key-file .ssl/server.key --ssl-cert-file .ssl/server.crt'
+alias thin_ssl_3017='thin start -p 3017 --ssl --ssl-key-file .ssl/server.key --ssl-cert-file .ssl/server.crt'
+alias thin_ssl_3018='thin start -p 3018 --ssl --ssl-key-file .ssl/server.key --ssl-cert-file .ssl/server.crt'
+
+
+>>>>>>> 03fad7c27e2914faee1d3e238460adb72e2441ca
 
