@@ -25,11 +25,13 @@ alias crowdplsr_test='ssh crowdplsr_test@192.168.160.51'
 
 
 alias blinkingbox='ssh -i ~/Documents/blinkingbox/jeff-key-pair-virginia.pem ubuntu@ec2-54-84-191-83.compute-1.amazonaws.com'
-alias crowdplsr_mount='sshfs -o IdentityFile=/home/ffej/Documents/crowdplsr/jeff-key-pair-virginia.pem ubuntu@ec2-54-85-57-159.compute-1.amazonaws.com: ~/remote/crowdplsr'
-alias blinkingserver_mount='sshfs ffej@home.blinkingbox.net: ~/remote/blinkingbox'
+alias blinkingserver_mount='sshfs ffej@home.blinkingbox.net: ~/remote/blinkingserver'
 alias blinkingbox_mount='sshfs ffej@192.168.1.128: ~/remote/blinkingbox'
-alias pivpn_mount='sshfs pi@192.168.1.86: ~/remote/pivpn'
+alias vpn-server_mount='sshfs pi@192.168.1.43: ~/remote/vpn-server'
 alias crowdplsr_test_mount='sshfs crowdplsr_test@192.168.160.51: ~/remote/crowdplsr'
+
+
+
 alias thin_ssl_3001='thin start -p 3001 --ssl --ssl-key-file .ssl/server.key --ssl-cert-file .ssl/server.crt'
 alias thin_ssl_3002='thin start -p 3002 --ssl --ssl-key-file .ssl/server.key --ssl-cert-file .ssl/server.crt'
 alias thin_ssl_3003='thin start -p 3003 --ssl --ssl-key-file .ssl/server.key --ssl-cert-file .ssl/server.crt'
@@ -48,7 +50,4 @@ alias thin_ssl_3015='thin start -p 3015 --ssl --ssl-key-file .ssl/server.key --s
 alias thin_ssl_3016='thin start -p 3016 --ssl --ssl-key-file .ssl/server.key --ssl-cert-file .ssl/server.crt'
 alias thin_ssl_3017='thin start -p 3017 --ssl --ssl-key-file .ssl/server.key --ssl-cert-file .ssl/server.crt'
 alias thin_ssl_3018='thin start -p 3018 --ssl --ssl-key-file .ssl/server.key --ssl-cert-file .ssl/server.crt'
-
-
->>>>>>> 03fad7c27e2914faee1d3e238460adb72e2441ca
 
