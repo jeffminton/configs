@@ -1,12 +1,12 @@
 # use the powerline patched font variant of the theme
-#tmux_conf_theme=powerline_patched_font
+tmux_conf_theme=powerline_patched_font
 
 # use 5 hearts for the battery status
-#tmux_conf_battery_symbol=heart
-#tmux_conf_battery_symbol_count=5
+tmux_conf_battery_symbol=heart
+tmux_conf_battery_symbol_count=5
 
 # use the heat palette for the battery status
-#tmux_conf_battery_palette=heat
+tmux_conf_battery_palette=heat
 
 # display the battery status: charging (U+26A1) / discharging (U+1F50B)
 #tmux_conf_battery_status=true
@@ -15,8 +15,8 @@
 #tmux_conf_battery='#(battery -t) '
 
 # new windows and new panes optionally retain current path
-#tmux_conf_new_windows_retain_current_path=false
-#tmux_conf_new_panes_retain_current_path=true
+tmux_conf_new_windows_retain_current_path=true
+tmux_conf_new_panes_retain_current_path=true
 
 # if you're running tmux within iTerm2
 #   - and tmux is 1.9 or 1.9a
