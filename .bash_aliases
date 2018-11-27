@@ -10,6 +10,9 @@ alias blinklocal='ssh ffej@blinking-server'
 alias blinklocalx='ssh -X ffej@blinking-server'
 alias blinkremote='ssh -L 5001:localhost:5901 -L 5000:blinking-box:3389 ffej@home.blinkingbox.net'
 alias blinkremotex='ssh -X -L 10000:localhost:10000 -L 3390:blinking-media:3389 ffej@home.blinkingbox.net'
+alias blinklocalip='ssh ffej@192.168.1.42'
+alias blinklocalxip='ssh -X ffej@192.168.1.42'
+
 alias router="ssh ffej@192.168.1.1"
 alias rpilocal='ssh ffej@blinking-pi'
 alias rpiremote='ssh -p 23 ffej@home.blinkingbox.net'
@@ -20,15 +23,20 @@ alias minelocalx='ssh -X minecraft@blinking-server'
 alias mineremote='ssh -L 3389:blinking-book:3389 -L 5901:blinking-book:5901 -L 5902:localhost:5901 -L 10000:localhost:10000 -L 3390:blinking-media:3389 minecraft@home.blinkingbox.net'
 alias mineremotex='ssh -X -L 10000:localhost:10000 -L 3390:blinking-media:3389 minecraft@home.blinkingbox.net'
 alias crowdplsr='ssh -i ~/Documents/crowdplsr/jeff-key-pair-virginia.pem ubuntu@ec2-54-85-57-159.compute-1.amazonaws.com'
-alias crowdplsr_jeff='ssh jeff@192.168.160.51'
-alias crowdplsr_test='ssh crowdplsr_test@192.168.160.51'
+alias crowdplsr_jeff='ssh -p 24 jeff@home.blinkingbox.net'
+alias crowdplsr_test='ssh crowdplsr_test@crowdplsr.ddns.net'
+alias crowdplsr_test_x='ssh -X crowdplsr_test@crowdplsr.ddns.net'
+alias crowdplsr_test_home='ssh -p 24 crowdplsr_test@home.blinkingbox.net'
+
 
 
 alias blinkingbox='ssh -i ~/Documents/blinkingbox/jeff-key-pair-virginia.pem ubuntu@ec2-54-84-191-83.compute-1.amazonaws.com'
 alias blinkingserver_mount='sshfs ffej@home.blinkingbox.net: ~/remote/blinkingserver'
+alias blinklocal_mount='sshfs ffej@192.168.1.42: ~/remote/blinkingserver'
 alias blinkingbox_mount='sshfs ffej@192.168.1.128: ~/remote/blinkingbox'
+alias raspberrypi_mount='sshfs pi@raspberrypi: ~/remote/raspberrypi'
 alias vpn-server_mount='sshfs pi@192.168.1.43: ~/remote/vpn-server'
-alias crowdplsr_test_mount='sshfs crowdplsr_test@192.168.160.51: ~/remote/crowdplsr'
+alias crowdplsr_test_mount='sshfs crowdplsr_test@crowdplsr.ddns.net: ~/remote/crowdplsr'
 
 
 
