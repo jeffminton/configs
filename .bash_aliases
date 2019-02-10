@@ -34,7 +34,7 @@ alias blinkingbox='ssh -i ~/Documents/blinkingbox/jeff-key-pair-virginia.pem ubu
 alias blinkingserver_mount='sshfs ffej@home.blinkingbox.net: ~/remote/blinkingserver'
 alias blinklocal_mount='sshfs ffej@192.168.1.42: ~/remote/blinkingserver'
 alias blinkingbox_mount='sshfs ffej@192.168.1.128: ~/remote/blinkingbox'
-alias raspberrypi_mount='sshfs pi@raspberrypi: ~/remote/raspberrypi'
+alias raspberrypi_mount='sshfs pi@192.168.1.45: ~/remote/raspberrypi -o nonempty'
 alias vpn-server_mount='sshfs pi@192.168.1.43: ~/remote/vpn-server'
 alias crowdplsr_test_mount='sshfs crowdplsr_test@crowdplsr.ddns.net: ~/remote/crowdplsr'
 

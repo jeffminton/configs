@@ -178,7 +178,13 @@ source ~/.railsrc
 #=== end of sysidk set-up
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export PATH=$PATH:/home/ffej/Build/perf-tools/bin
 #source /home/jminton/.rvm/scripts/rvm
 
 
-export JAVA_HOME=/usr
+export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+export PAPARAZZI_HOME=~/paparazzi
+export PAPARAZZI_SRC=~/paparazzi
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
