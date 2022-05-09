@@ -189,3 +189,10 @@ export PAPARAZZI_SRC=~/paparazzi
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+
+
+if [ -z "$TZ" ]
+then
+      export TX=`cat /etc/timezone`
+fi
