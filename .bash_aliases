@@ -34,13 +34,15 @@ alias blinkingbox='ssh -i ~/Documents/blinkingbox/jeff-key-pair-virginia.pem ubu
 alias blinkingserver_mount='sshfs ffej@home.blinkingbox.net: ~/remote/blinkingserver'
 alias blinklocal_mount='sshfs ffej@192.168.1.42: ~/remote/blinkingserver'
 alias blinkingbox_mount='sshfs ffej@192.168.1.128: ~/remote/blinkingbox'
-alias raspberrypi_mount='sshfs pi@raspberrypi: ~/remote/raspberrypi'
+alias raspberrypi_mount='sshfs pi@192.168.1.105: ~/remote/raspberrypi'
+alias rackpi_mount='sshfs ffej@rackpi: ~/remote/rackpi'
 alias vpn-server_mount='sshfs pi@192.168.1.43: ~/remote/vpn-server'
 alias crowdplsr_test_mount='sshfs crowdplsr_test@crowdplsr.ddns.net: ~/remote/crowdplsr'
 
 
 
 alias thin_ssl_3001='thin start -p 3001 --ssl --ssl-key-file .ssl/server.key --ssl-cert-file .ssl/server.crt'
+alias thin_3001='thin start -p 3001'
 alias thin_ssl_3002='thin start -p 3002 --ssl --ssl-key-file .ssl/server.key --ssl-cert-file .ssl/server.crt'
 alias thin_ssl_3003='thin start -p 3003 --ssl --ssl-key-file .ssl/server.key --ssl-cert-file .ssl/server.crt'
 alias thin_ssl_3004='thin start -p 3004 --ssl --ssl-key-file .ssl/server.key --ssl-cert-file .ssl/server.crt'
@@ -58,4 +60,23 @@ alias thin_ssl_3015='thin start -p 3015 --ssl --ssl-key-file .ssl/server.key --s
 alias thin_ssl_3016='thin start -p 3016 --ssl --ssl-key-file .ssl/server.key --ssl-cert-file .ssl/server.crt'
 alias thin_ssl_3017='thin start -p 3017 --ssl --ssl-key-file .ssl/server.key --ssl-cert-file .ssl/server.crt'
 alias thin_ssl_3018='thin start -p 3018 --ssl --ssl-key-file .ssl/server.key --ssl-cert-file .ssl/server.crt'
+
+
+
+alias sickrage_container_reinit='sudo docker container stop sickrage; sudo docker container rm sickrage; sudo docker rmi sickrage/sickrage; sudo docker run -d --name="sickrage" -v /home/ffej/sickrage:/config -v /home/ffej/Downloads/nzb:/downloads -v /home/ffej/Videos/TV:/tv -v /home/ffej/Videos/Anime:/anime -v /etc/localtime:/etc/localtime:ro -p 8081:8081 sickrage/sickrage:latest'
+
+
+
+alias factorio_latest_new_world_update='cd ~/docker; docker-compose build --no-cache factorio_manager_latest_new_world; docker-compose stop factorio_manager_latest_new_world; docker-compose up -d --build factorio_manager_latest_new_world'
+alias factorio_latest_update='cd ~/docker; docker-compose build --no-cache factorio_manager_latest; docker-compose stop factorio_manager_latest; docker-compose up -d --build factorio_manager_latest'
+
+
+
+
+
+
+
+
+
+
 

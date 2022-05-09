@@ -114,6 +114,7 @@ export LD_LIBRARY_PATH=${HOME}/lib:${LD_LIBRARY_PATH}
 #export TERM="xterm-256color"
 export TERM="screen-256color"
 
+
 # Note: ~/.ssh/environment should not be used, as it
 #       already has a different purpose in SSH.
 
