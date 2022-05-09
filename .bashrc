@@ -171,7 +171,7 @@ unset env
 
 #source ~/.bashrc_local
 
-source ~/.railsrc
+#source ~/.railsrc
 
 #=== sysidk set-up
 # (please leave '#===' lines) last updated Thu Aug  2 16:15:12 EDT 2012
