@@ -1,18 +1,16 @@
 #!/bin/bash
 
+alias ls='ls -GF'
 
 alias save_tmux_sessions='rm .tmux_restore_sessions; tmux list-sessions | cut -d ":" -f 1 | xargs -I {[]} echo "new-session -s {[]}" >> .tmux_restore_sessions; echo "source-file ~/.tmux.conf" >> .tmux_restore_sessions'
 
 #echo ".bash_aliases sourced"
 
 alias bill='ssh -X jmint580@bill.kutztown.edu'
-alias blinklocal='ssh ffej@blinking-server'
+alias blinklocal='ssh ffej@192.168.1.42'
 alias blinklocalx='ssh -X ffej@blinking-server'
-alias blinkremote='ssh -L 5001:localhost:5901 -L 5000:blinking-box:3389 ffej@home.blinkingbox.net'
+alias blinkremote='ssh -L 5000:localhost:5000 ffej@home.blinkingbox.net'
 alias blinkremotex='ssh -X -L 10000:localhost:10000 -L 3390:blinking-media:3389 ffej@home.blinkingbox.net'
-alias blinklocalip='ssh ffej@192.168.1.42'
-alias blinklocalxip='ssh -X ffej@192.168.1.42'
-
 alias router="ssh ffej@192.168.1.1"
 alias rpilocal='ssh ffej@blinking-pi'
 alias rpiremote='ssh -p 23 ffej@home.blinkingbox.net'
@@ -23,26 +21,19 @@ alias minelocalx='ssh -X minecraft@blinking-server'
 alias mineremote='ssh -L 3389:blinking-book:3389 -L 5901:blinking-book:5901 -L 5902:localhost:5901 -L 10000:localhost:10000 -L 3390:blinking-media:3389 minecraft@home.blinkingbox.net'
 alias mineremotex='ssh -X -L 10000:localhost:10000 -L 3390:blinking-media:3389 minecraft@home.blinkingbox.net'
 alias crowdplsr='ssh -i ~/Documents/crowdplsr/jeff-key-pair-virginia.pem ubuntu@ec2-54-85-57-159.compute-1.amazonaws.com'
-alias crowdplsr_jeff='ssh -p 24 jeff@home.blinkingbox.net'
-alias crowdplsr_test='ssh crowdplsr_test@crowdplsr.ddns.net'
-alias crowdplsr_test_x='ssh -X crowdplsr_test@crowdplsr.ddns.net'
-alias crowdplsr_test_home='ssh -p 24 crowdplsr_test@home.blinkingbox.net'
-
+alias crowdplsr_jeff='ssh jeff@192.168.160.51'
+alias crowdplsr_test='ssh crowdplsr_test@192.168.160.51'
 
 
 alias blinkingbox='ssh -i ~/Documents/blinkingbox/jeff-key-pair-virginia.pem ubuntu@ec2-54-84-191-83.compute-1.amazonaws.com'
 alias blinkingserver_mount='sshfs ffej@home.blinkingbox.net: ~/remote/blinkingserver'
-alias blinklocal_mount='sshfs ffej@192.168.1.42: ~/remote/blinkingserver'
 alias blinkingbox_mount='sshfs ffej@192.168.1.128: ~/remote/blinkingbox'
-alias rackpi_mount='sshfs ffej@rackpi: ~/remote/rackpi'
-alias raspberrypi_mount='sshfs pi@192.168.1.45: ~/remote/raspberrypi -o nonempty'
 alias vpn-server_mount='sshfs pi@192.168.1.43: ~/remote/vpn-server'
-alias crowdplsr_test_mount='sshfs crowdplsr_test@crowdplsr.ddns.net: ~/remote/crowdplsr'
+alias crowdplsr_test_mount='sshfs crowdplsr_test@192.168.160.51: ~/remote/crowdplsr'
 
 
 
 alias thin_ssl_3001='thin start -p 3001 --ssl --ssl-key-file .ssl/server.key --ssl-cert-file .ssl/server.crt'
-alias thin_3001='thin start -p 3001'
 alias thin_ssl_3002='thin start -p 3002 --ssl --ssl-key-file .ssl/server.key --ssl-cert-file .ssl/server.crt'
 alias thin_ssl_3003='thin start -p 3003 --ssl --ssl-key-file .ssl/server.key --ssl-cert-file .ssl/server.crt'
 alias thin_ssl_3004='thin start -p 3004 --ssl --ssl-key-file .ssl/server.key --ssl-cert-file .ssl/server.crt'
@@ -63,20 +54,13 @@ alias thin_ssl_3018='thin start -p 3018 --ssl --ssl-key-file .ssl/server.key --s
 
 
 
-alias sickrage_container_reinit='sudo docker container stop sickrage; sudo docker container rm sickrage; sudo docker rmi sickrage/sickrage; sudo docker run -d --name="sickrage" -v /home/ffej/sickrage:/config -v /home/ffej/Downloads/nzb:/downloads -v /home/ffej/Videos/TV:/tv -v /home/ffej/Videos/Anime:/anime -v /etc/localtime:/etc/localtime:ro -p 8081:8081 sickrage/sickrage:latest'
+
+alias cip_mount='sshfs jminton@10.18.101.80: ~/remote/cip_mount'
+alias cip_mount_wifi='sshfs jminton@10.212.112.50: ~/remote/cip_mount'
+alias cip_umount='diskutil umount force /Users/jminton/remote/cip_mount'
 
 
-
-alias factorio_latest_new_world_update='cd ~/docker; docker-compose build --no-cache factorio_manager_latest_new_world; docker-compose stop factorio_manager_latest_new_world; docker-compose up -d --build factorio_manager_latest_new_world'
-alias factorio_latest_update='cd ~/docker; docker-compose build --no-cache factorio_manager_latest; docker-compose stop factorio_manager_latest; docker-compose up -d --build factorio_manager_latest'
-
-
-
-
-
-
-
-
-
+alias cip_ssh='ssh jminton@10.18.101.80'
+alias cip_ssh_wifi='ssh jminton@10.212.112.50'
 
 
