@@ -194,5 +194,7 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 if [ -z "$TZ" ]
 then
-      export TZ=`cat /etc/timezone`
+    if [ -x /etc/timezone ]; then
+        export TZ=`cat /etc/timezone`
+    fi
 fi
