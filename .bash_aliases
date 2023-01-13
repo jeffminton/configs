@@ -24,6 +24,7 @@ alias mineremote='ssh -L 3389:blinking-book:3389 -L 5901:blinking-book:5901 -L 5
 alias mineremotex='ssh -X -L 10000:localhost:10000 -L 3390:blinking-media:3389 minecraft@home.blinkingbox.net'
 alias blinkingbox_aws='ssh -i ~/Documents/blinkingbox/jeff-key-pair-virginia.pem ubuntu@ec2-54-84-191-83.compute-1.amazonaws.com'
 alias blinking_book='ssh ffej@blinking-book'
+alias retropieip='ssh pi@192.168.1.43'
 
 
 # SSHFS Mounts
@@ -35,6 +36,7 @@ alias rackpi_mount='sshfs ffej@rackpi: ~/remote/rackpi'
 alias raspberrypi_mount='sshfs pi@192.168.1.45: ~/remote/raspberrypi -o nonempty'
 alias vpn-server_mount='sshfs pi@192.168.1.43: ~/remote/vpn-server'
 alias crowdplsr_test_mount='sshfs crowdplsr_test@crowdplsr.ddns.net: ~/remote/crowdplsr'
+alias retropie_mount='sshfs pi@192.168.1.43: ~/remote/retropie'
 
 
 alias cip_ssh='ssh jminton@10.18.101.80'
