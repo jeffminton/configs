@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Generic
+alias ls='ls -GF'
 alias save_tmux_sessions='rm .tmux_restore_sessions; tmux list-sessions | cut -d ":" -f 1 | xargs -I {[]} echo "new-session -s {[]}" >> .tmux_restore_sessions; echo "source-file ~/.tmux.conf" >> .tmux_restore_sessions'
 alias sudo='sudo env PATH=$PATH'
 
