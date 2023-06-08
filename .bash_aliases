@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Generic
-alias ls='ls -GF'
+alias ls='ls -GF --color=always'
 alias save_tmux_sessions='rm .tmux_restore_sessions; tmux list-sessions | cut -d ":" -f 1 | xargs -I {[]} echo "new-session -s {[]}" >> .tmux_restore_sessions; echo "source-file ~/.tmux.conf" >> .tmux_restore_sessions'
 alias sudo='sudo env PATH=$PATH'
 
@@ -9,6 +9,9 @@ alias sudo='sudo env PATH=$PATH'
 # SSH Connections
 alias blinklocal='ssh ffej@blinking-server.pettingzoo'
 alias blinklocalx='ssh -X ffej@blinking-server.pettingzoo'
+alias blinklocalutilities='ssh ffej@blinking-server-utilities.pettingzoo'
+alias blinklocalha='ssh ffej@blinking-server-home-automation.pettingzoo'
+alias blinklocalmedia='ssh ffej@blinking-server-media.pettingzoo'
 alias blinkremote='ssh -L 5001:localhost:5901 -L 5000:blinking-box:3389 ffej@blinkingbox.net'
 alias blinkremotex='ssh -X -L 10000:localhost:10000 -L 3390:blinking-media:3389 ffej@blinkingbox.net'
 alias blinkingbooklocal='ssh ffej@192.168.1.88'
@@ -19,7 +22,6 @@ alias rpilocal='ssh ffej@blinking-pi'
 alias rpiremote='ssh -p 23 ffej@blinkingbox.net'
 alias rackpi='ssh pi@rackpi.pettingzoo'
 alias rackpiip='ssh pi@192.168.1.44'
-alias rackpi_4='ssh ffej@rackpi-4.pettingzoo'
 alias minelocal='ssh minecraft@blinking-server.pettingzoo'
 alias minelocalx='ssh -X minecraft@blinking-server.pettingzoo'
 alias mineremote='ssh -L 3389:blinking-book:3389 -L 5901:blinking-book:5901 -L 5902:localhost:5901 -L 10000:localhost:10000 -L 3390:blinking-media:3389 minecraft@blinkingbox.net'
@@ -27,6 +29,8 @@ alias mineremotex='ssh -X -L 10000:localhost:10000 -L 3390:blinking-media:3389 m
 alias blinkingbox_aws='ssh -i ~/Documents/blinkingbox/jeff-key-pair-virginia.pem ubuntu@ec2-54-84-191-83.compute-1.amazonaws.com'
 alias blinking_book='ssh ffej@blinking-book.pettingzoo'
 alias retropieip='ssh pi@192.168.1.43'
+alias retropie='ssh pi@retropie.pettingzoo'
+
 
 
 # SSHFS Mounts
@@ -38,7 +42,8 @@ alias rackpi_mount='sshfs ffej@rackpi.pettingzoo: ~/remote/rackpi'
 alias raspberrypi_mount='sshfs pi@192.168.1.45: ~/remote/raspberrypi -o nonempty'
 alias vpn-server_mount='sshfs pi@192.168.1.43: ~/remote/vpn-server'
 alias crowdplsr_test_mount='sshfs crowdplsr_test@crowdplsr.ddns.net: ~/remote/crowdplsr'
-alias retropie_mount='sshfs pi@192.168.1.43: ~/remote/retropie'
+alias retropieip_mount='sshfs pi@192.168.1.43: ~/remote/retropie'
+alias retropie_mount='sshfs pi@retropie.pettingzoo: ~/remote/retropie'
 
 
 alias cip_ssh='ssh jminton@10.18.101.80'
