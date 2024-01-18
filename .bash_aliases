@@ -8,10 +8,12 @@ alias sudo='sudo env PATH=$PATH'
 
 # SSH Connections
 alias blinklocal='ssh ffej@blinking-server.pettingzoo'
+alias blinklocalprox='ssh root@blinking-server.pettingzoo'
 alias blinklocalx='ssh -X ffej@blinking-server.pettingzoo'
 alias blinklocalutilities='ssh ffej@blinking-server-utilities.pettingzoo'
 alias blinklocalha='ssh ffej@blinking-server-home-automation.pettingzoo'
 alias blinklocalmedia='ssh ffej@blinking-server-media.pettingzoo'
+alias blinklocalfrigate='ssh ffej@blinking-server-frigate.pettingzoo'
 alias blinkremote='ssh -L 5001:localhost:5901 -L 5000:blinking-box:3389 ffej@blinkingbox.net'
 alias blinkremotex='ssh -X -L 10000:localhost:10000 -L 3390:blinking-media:3389 ffej@blinkingbox.net'
 alias blinkingbooklocal='ssh ffej@192.168.1.88'
@@ -30,6 +32,7 @@ alias blinkingbox_aws='ssh -i ~/Documents/blinkingbox/jeff-key-pair-virginia.pem
 alias blinking_book='ssh ffej@blinking-book.pettingzoo'
 alias retropieip='ssh pi@192.168.1.43'
 alias retropie='ssh pi@retropie.pettingzoo'
+alias blinklocalnfs='ssh ffej@blinking-nfs.pettingzoo'
 
 
 
