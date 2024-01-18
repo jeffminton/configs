@@ -33,7 +33,7 @@ alias blinking_book='ssh ffej@blinking-book.pettingzoo'
 alias retropieip='ssh pi@192.168.1.43'
 alias retropie='ssh pi@retropie.pettingzoo'
 alias blinklocalnfs='ssh ffej@blinking-nfs.pettingzoo'
-
+alias ups_pi_j='ssh pi@192.168.1.46'
 
 
 # SSHFS Mounts
@@ -47,6 +47,11 @@ alias vpn-server_mount='sshfs pi@192.168.1.43: ~/remote/vpn-server'
 alias crowdplsr_test_mount='sshfs crowdplsr_test@crowdplsr.ddns.net: ~/remote/crowdplsr'
 alias retropieip_mount='sshfs pi@192.168.1.43: ~/remote/retropie'
 alias retropie_mount='sshfs pi@retropie.pettingzoo: ~/remote/retropie'
+alias blinkingnfsbackup_mount='sshfs ffej@blinking-nfs.pettingzoo:/mnt/large_raid/data/backup ~/remote/blinking_nfs/backup'
+alias blinkingnfs_mount='sshfs ffej@blinking-nfs.pettingzoo:/mnt/large_raid/data ~/remote/blinking_nfs/data'
+alias blinkingutil_mount='sshfs ffej@192.168.1.11: ~/remote/blinkingutilities'
+
+
 
 
 alias cip_ssh='ssh jminton@10.18.101.80'
