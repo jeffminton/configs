@@ -34,7 +34,7 @@ alias retropieip='ssh pi@192.168.1.43'
 alias retropie='ssh pi@retropie.pettingzoo'
 alias blinklocalnfs='ssh ffej@blinking-nfs.pettingzoo'
 alias ups_pi_j='ssh pi@192.168.1.46'
-
+alias octoprint='ssh pi@192.168.1.50'
 
 # SSHFS Mounts
 #alias blinkingserver_mount='sshfs ffej@blinkingbox.net: ~/remote/blinkingserver'
