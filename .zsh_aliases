@@ -1,7 +1,7 @@
 #!/bin/bash
 
-source .bash_aliases
+source ~/.bash_aliases
 
 alias awsgusprdlap01='ssh jminton@awsgusprdlap01'
 
-
+alias test_sepasoft_upgrade='ssh -i /Users/jminton/test_spasoft_upgrade_key.pem ubuntu@ec2-54-151-31-66.us-west-1.compute.amazonaws.com'
