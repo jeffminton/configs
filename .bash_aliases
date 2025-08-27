@@ -53,6 +53,8 @@ alias retropie_mount='sshfs pi@retropie.pettingzoo: ~/remote/retropie'
 alias blinkingnfsbackup_mount='sshfs ffej@blinking-nfs.pettingzoo:/mnt/large_raid/data/backup ~/remote/blinking_nfs/backup'
 alias blinkingnfs_mount='sshfs ffej@blinking-nfs.pettingzoo:/mnt/large_raid/data ~/remote/blinking_nfs/data'
 alias blinkingutilities_mount='sshfs ffej@192.168.1.11: ~/remote/blinkingutilities'
+alias blinkingmedia_mount='sshfs ffej@192.168.1.17: ~/remote/blinkingmedia'
+
 
 
 # Docker

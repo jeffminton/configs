@@ -7,7 +7,7 @@ calc () {
 }
 
 
-source .zsh_aliases
+source ~/.zsh_aliases
 
 
 # create a zkbd compatible hash;
@@ -220,7 +220,7 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 export PATH="$PATH:$HOME/node_modules/.bin"
 
-export JAVA_HOME=`/usr/libexec/java_home -v 1.8.0_191`
+#export JAVA_HOME=`/usr/libexec/java_home -v 1.8.0_191`
 
 
 #export PATH=`echo ${PATH} | awk -v RS=: -v ORS=: '/VMware Fusion.app/ {next} {print}'`
@@ -237,4 +237,23 @@ export PATH=$(echo ${PATH} | awk -v RS=: -v ORS=: '/VMware Fusion.app/ {next} {p
 
 
 export PATH="$PATH:/usr/local/ignition"
+
+export PATH="/usr/local/opt/sqlite/bin:$PATH"
+
+
+export PATH="/usr/local/Cellar/avr-gcc@8/8.4.0_2/bin:$PATH"
+
+#:/Users/jminton/Library/Python/3.9/bin"
+
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+
+eval "$(pyenv init -)"
+
+
+export SSLKEYLOGFILE=~/.ssl-key.log
+
+export OPENSCADPATH=$HOME/Documents/OpenSCAD/libraries/
+
+
+export PATH=/usr/local/bin:$PATH
 
